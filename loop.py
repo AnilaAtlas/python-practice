@@ -67,3 +67,29 @@ for multip in range(1,15):
     print("9 x", multip, "=", multip*9)
 
 #write a program to get factorial of 5
+# num = 5
+# fact = 1
+# while num > 0:
+#     fact *= num
+#     num -= 1
+#     print(f"The factorial of {num + 1} is: {fact}")
+
+# number = 5
+# factorial = 1
+
+# while number > 0:
+#     factorial *= number
+#     number -= 1
+
+# print(f"Factorial of {number} is: {factorial}")
+def factorial(n):
+    if n < 0:
+        return None
+    result = 1
+    i = n
+    while i > 0:
+        result *= i
+        i -= 1
+    return result
+
+print(factorial(5))  # Output: 120
