@@ -92,4 +92,4 @@ def factorial(n):
         i -= 1
     return result
 
-print(factorial(5))  # Output: 120
+print("Factorial of 5 is:", (factorial(5))) 
