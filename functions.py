@@ -34,3 +34,31 @@ print(result)
 addition = lambda num1,num2: num1+num2
 result = addition(5,5)
 print(result)
+
+# map() function
+numList = [1,2,3,4,5,6]
+def divide(x):
+    return x/2
+# print(map(divide,numList))
+print(list(map(divide, numList)))
+# now in lambda method
+print(list(map(lambda y: y/y ,numList)))
+print(list(map(lambda x: x+x, numList)))
+print(list(map(lambda x:x-x, numList)))
+print(list(map(lambda x: x*x, numList)))
+print(list(map(lambda x:x%x, numList)))
+print(list(map(lambda x:x**x, numList)))
+
+# filter()
+even = list(filter(lambda x: x % 2 == 0, numList))
+print(even)
+#  for getting odd numbers
+print(list(filter(lambda x: x % 2 == 1, numList)))
+# and we can get odd numbers like this
+odd = list(filter(lambda p: p % 2 == 1, numList))
+print(odd)
+
+# reduce()
+from functools import reduce
+product = reduce(lambda total,y:total+y, numList)
+print(product)
